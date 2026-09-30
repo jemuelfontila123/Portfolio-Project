@@ -12,30 +12,28 @@ const Contact = () => {
     message: "",
   });
 
+  // Update form data whenever an input changes
   const handleChange = (event) => {
     const { name, value } = event.target;
-
     setFormData((previousData) => ({
       ...previousData,
       [name]: value,
     }));
   };
 
+  // Handle form submission
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    console.log("Contact Form:", formData);
-
-    // Store the Data temporarily for now just to show I can get the data
-
+    // Store form data temporarily in localStorage
     localStorage.setItem("contactForm", JSON.stringify(formData));
-    
-    // Print the Data 
-    console.log(JSON.parse(localStorage.getItem("contactForms")));
-        // THEN redirect
+
+    // Retrieve and display the stored data
+    const storedData = JSON.parse(localStorage.getItem("contactForm"));
+    console.log("Stored Contact Form:", storedData);
+
+    // Redirect to the home page
     navigate("/");
-
-
   };
 
   return (
@@ -50,7 +48,6 @@ const Contact = () => {
 
       <form className="contact-form" onSubmit={handleSubmit}>
         <div className="form-row">
-
           <div className="form-group">
             <label htmlFor="firstName">First Name</label>
             <input
@@ -74,7 +71,6 @@ const Contact = () => {
               required
             />
           </div>
-
         </div>
 
         <div className="form-group">
@@ -83,10 +79,10 @@ const Contact = () => {
             id="contactNumber"
             name="contactNumber"
             type="tel"
-            placeholder="+905-123-4567"
+            placeholder="905-123-4567"
             value={formData.contactNumber}
             onChange={handleChange}
-            pattern="\[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
             title="Enter a phone number in the format 905-123-4567"
             required
           />

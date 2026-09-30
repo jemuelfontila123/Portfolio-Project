@@ -1,7 +1,7 @@
 import ProjectCard from "../components/ProjectCard";
 import projects from "../data/projects";
 
-function Projects() {
+const Projects = () => {
   return (
     <section className="container page-section">
       <div className="section-heading">

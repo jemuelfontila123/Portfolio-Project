@@ -2,7 +2,7 @@
 
 import { NavLink } from "react-router-dom";
 
-function Navbar() {
+const Navbar = () => {
   return (
     <header className="navbar">
       <NavLink to="/" className="logo">

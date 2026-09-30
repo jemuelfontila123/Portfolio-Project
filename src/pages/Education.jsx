@@ -1,6 +1,6 @@
 import education from "../data/education";
 
-function Education() {
+const Education = () => {
   return (
     <section className="container page-section">
       <div className="section-heading">
