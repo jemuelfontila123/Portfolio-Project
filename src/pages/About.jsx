@@ -1,31 +1,25 @@
-  import profileImage from "../assets/profile.jpg";
-  import resume from "/Jemuel_Fontila_Resume.pdf"
+import resume from "/Jemuel_Fontila_Resume.pdf";
+import about from "../data/about";
 
+const About = () => {
+  return (
+    <section className="container page-section">
+      <div className="section-heading">
+        <p className="eyebrow">ABOUT</p>
+        <h1>About Me</h1>
+      </div>
 
-  const About = () => {
-    return (
-      <section className="container page-section">
-        <div className="section-heading">
-          <p className="eyebrow">ABOUT</p>
-          <h1>About Me</h1>
-        </div>
-
-        <div className="about-grid">
-          <img
-            src={profileImage}
+      <div className="about-grid">
+        <img
+          src={about.image}
           alt="Profile"
           className="profile-image"
         />
 
         <div>
-          <h2>Jemuel Fontila</h2>
+          <h2>{about.name}</h2>
 
-          <p>
-            I am a software development student with an interest in
-            creating modern, maintainable, and user-friendly applications.
-            I enjoy learning new technologies and applying software
-            engineering principles to practical projects.
-          </p>
+          <p>{about.biography}</p>
 
           <a
             href={resume}
@@ -39,6 +33,6 @@
       </div>
     </section>
   );
-}
+};
 
 export default About;

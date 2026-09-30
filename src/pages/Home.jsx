@@ -1,20 +1,19 @@
-import "../App.css"
-
+import "../App.css";
 import { Link } from "react-router-dom";
+import home from "../data/home";
 
-const Home = () =>  {
+const Home = () => {
   return (
     <section className="hero container">
       <div className="hero-content">
-        <p className="eyebrow">SOFTWARE DEVELOPER</p>
+        <p className="eyebrow">{home.role}</p>
 
         <h1>
-          Hi, I'm <span>Jemuel Fontila</span>
+          Hi, I'm <span>{home.name}</span>
         </h1>
 
         <p className="hero-description">
-          I build clean, practical, and user-focused software solutions.
-          Welcome to my portfolio.
+          {home.description}
         </p>
 
         <div className="hero-actions">
@@ -29,8 +28,6 @@ const Home = () =>  {
       </div>
     </section>
   );
-}
-
-
+};
 
 export default Home;
