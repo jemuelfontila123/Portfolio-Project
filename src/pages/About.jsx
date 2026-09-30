@@ -1,4 +1,3 @@
-import resume from "/Jemuel_Fontila_Resume.pdf";
 import about from "../data/about";
 
 const About = () => {
@@ -18,11 +17,9 @@ const About = () => {
 
         <div>
           <h2>{about.name}</h2>
-
           <p>{about.biography}</p>
-
           <a
-            href={resume}
+            href={about.resume}
             target="_blank"
             rel="noreferrer"
             className="btn btn-primary"
