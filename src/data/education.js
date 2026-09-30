@@ -1,3 +1,5 @@
+// Replace later when connected to backend
+
 const education = [
   {
     id: 1,

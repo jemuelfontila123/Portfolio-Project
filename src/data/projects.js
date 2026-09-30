@@ -1,3 +1,6 @@
+// Replace later when connected to backend
+
+
 const projects = [
   {
     id: 1,

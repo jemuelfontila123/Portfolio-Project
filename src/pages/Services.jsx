@@ -7,7 +7,7 @@ const Services = () => {
         <p className="eyebrow">WHAT I DO</p>
         <h1>Services</h1>
       </div>
-
+     {/* Pull the Data from  Services.js */}
       <div className="service-grid">
         {services.map((service) => (
           <article className="service-card" key={service.title}>

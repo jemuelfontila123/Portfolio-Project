@@ -1,18 +1,20 @@
+// Replace later when connected to backend
+
 const services = [
   {
-    title: "Web Development",
+    title: "Custom System Development",
     description:
-      "Development of responsive and modern websites using current web technologies.",
+      "Development of custom systems such as inventory, booking, employee management, and business management applications tailored to specific needs.",
   },
   {
-    title: "Software Development",
+    title: "Mobile App Development",
     description:
-      "Design and development of modular software applications using programming best practices.",
+      "Development of mobile applications with user-friendly interfaces, API integration, authentication, and database connectivity.",
   },
   {
-    title: "Application Development",
+    title: "Full-Stack Web Application Development",
     description:
-      "Development of practical applications focused on usability, maintainability, and performance.",
+      "Development of complete web applications with responsive front-end interfaces, back-end APIs, databases, authentication, and business logic.",
   },
 ];
 

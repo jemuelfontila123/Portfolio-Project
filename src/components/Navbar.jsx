@@ -7,6 +7,7 @@ function Navbar() {
     <header className="navbar">
       <NavLink to="/" className="logo">
         <span className="logo-text">Jemuel Fontila</span>
+        {/* Logo */}
         <span className="logo-mark">GG</span>
       </NavLink>
 

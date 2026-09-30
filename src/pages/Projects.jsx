@@ -9,7 +9,7 @@ function Projects() {
         <h1>Projects</h1>
         <p>A selection of projects I have worked on.</p>
       </div>
-
+     {/* Pull the Data from Project.js */}
       <div className="project-grid">
         {projects.map((project) => (
           <ProjectCard

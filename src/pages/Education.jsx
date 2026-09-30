@@ -7,7 +7,7 @@ function Education() {
         <p className="eyebrow">BACKGROUND</p>
         <h1>Education</h1>
       </div>
-
+    {/* Pull the Data from Education.js */}
       <div className="timeline">
         {education.map((item) => (
           <div className="timeline-item" key={item.id}>

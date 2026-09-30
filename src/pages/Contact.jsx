@@ -12,23 +12,31 @@ const Contact = () => {
     message: "",
   });
 
-  function handleChange(event) {
+  const handleChange = (event) => {
     const { name, value } = event.target;
 
     setFormData((previousData) => ({
       ...previousData,
       [name]: value,
     }));
-  }
+  };
 
-  function handleSubmit(event) {
+  const handleSubmit = (event) => {
     event.preventDefault();
 
-    
     console.log("Contact Form:", formData);
 
+    // Store the Data temporarily for now just to show I can get the data
+
+    localStorage.setItem("contactForm", JSON.stringify(formData));
+    
+    // Print the Data 
+    console.log(JSON.parse(localStorage.getItem("contactForms")));
+        // THEN redirect
     navigate("/");
-  }
+
+
+  };
 
   return (
     <section className="container page-section">
@@ -42,6 +50,7 @@ const Contact = () => {
 
       <form className="contact-form" onSubmit={handleSubmit}>
         <div className="form-row">
+
           <div className="form-group">
             <label htmlFor="firstName">First Name</label>
             <input
@@ -65,6 +74,7 @@ const Contact = () => {
               required
             />
           </div>
+
         </div>
 
         <div className="form-group">
@@ -73,8 +83,11 @@ const Contact = () => {
             id="contactNumber"
             name="contactNumber"
             type="tel"
+            placeholder="+905-123-4567"
             value={formData.contactNumber}
             onChange={handleChange}
+            pattern="\[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            title="Enter a phone number in the format 905-123-4567"
             required
           />
         </div>
@@ -109,6 +122,6 @@ const Contact = () => {
       </form>
     </section>
   );
-}
+};
 
 export default Contact;
